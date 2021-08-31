@@ -1,0 +1,22 @@
+<%- include("partials/header"); -%>
+    <h1>Old diary Entry</h1>
+    
+    <%  pages.slice().reverse().forEach(function(text){ %>
+        <div>
+            <div>
+                <%=text.dates%>
+                <p>
+                    <%=text.content%>
+                </p>
+                <div>
+                    <% if(text.image) {%>
+                    <img src="./uploads/<%=text.image%>" alt="image">
+                    <% } %>
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        <% }) %>  
+
+<%- include("partials/footer"); -%>
